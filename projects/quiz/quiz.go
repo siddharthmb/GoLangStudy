@@ -41,7 +41,6 @@ func main() {
 		}
 //		fmt.Println(recs)
 		probs := populate(recs)
-		fmt.Println("\nShuffle = ", *shuffle)
 		play(probs, *timelimit, *shuffle)
 	}
 }
