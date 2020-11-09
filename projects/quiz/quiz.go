@@ -33,7 +33,7 @@ func main() {
 	if err != nil {
 		exit(fmt.Sprintf("Couldn't open file for reading: %s", *filename), 1)
 	} else {
-		//fp.Close()
+		defer fp.Close()
 		reader := csv.NewReader(fp)
 		recs, err := reader.ReadAll()
 		if err != nil {
